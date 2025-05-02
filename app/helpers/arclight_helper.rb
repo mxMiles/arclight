@@ -9,11 +9,12 @@ module ArclightHelper
   include Blacklight::LayoutHelperBehavior
 
   def repository_collections_path(repository)
-    search_action_url(
+    search_action_url( 
       f: {
         repository: [repository.name],
-        level: ['Collection']
+  #     level: ['Collection']
       }
+      group:true,
     )
   end
 
